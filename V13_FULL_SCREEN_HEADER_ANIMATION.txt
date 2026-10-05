@@ -1,0 +1,8 @@
+V13 FULL-SCREEN HEADER ANIMATION
+
+The homepage 3-image hero is now a full-screen header animation.
+- Each admin-selected header image fills the complete hero area.
+- Images cross-fade automatically every 4.2 seconds.
+- A subtle Ken Burns zoom runs on the active image.
+- Desktop uses a left-to-right readability overlay; mobile uses a bottom readability overlay.
+- Existing admin image upload/storage and hero click-to-category behavior are preserved.

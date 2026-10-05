@@ -1,0 +1,22 @@
+{
+  "name": "chaithanya-panchaloha-jewellery",
+  "version": "5.0.1",
+  "private": true,
+  "description": "Chaithanya Panchaloha Jewellery website with MongoDB Atlas + GridFS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongodb": "^6.20.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.6",
+    "busboy": "^1.6.0"
+  }
+}

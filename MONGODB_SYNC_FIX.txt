@@ -1,0 +1,34 @@
+CHAITHANYA MONGODB SYNC FIX
+
+Architecture after this fix:
+Admin edit -> Netlify /api/store -> MongoDB -> every browser/device -> live website
+
+Shared MongoDB data:
+- Products
+- Categories
+- Homepage/hero content
+- SEO settings
+- Model gallery
+- Homepage highlights
+- Orders
+- Customer reviews
+- Registered users
+- Notifications
+- Store settings
+- Visitor counter
+
+Device-local data:
+- Shopping cart
+- Current logged-in user/session
+- LocalStorage cache only
+
+Important behavior:
+- LocalStorage is only a cache; it is not the authoritative store database.
+- When MongoDB is available, admin changes are written to MongoDB.
+- Public browsers poll MongoDB every 15 seconds for shared-store changes.
+- If MongoDB is unavailable, changes are NOT reported as successfully saved; the site shows an error instead.
+- Cart data is no longer written into the shared MongoDB store document, preventing one device from overwriting another device's cart.
+- SEO canonical/sitemap/robots references now use https://chaithanya.shop/
+
+Deployment requirement:
+Set MONGODB_URI in Netlify Environment Variables. Redeploy the site after uploading this ZIP.

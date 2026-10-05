@@ -1,0 +1,9 @@
+CHAITHANYA V7 FIXES
+
+1. Replaced the text/C logo in the storefront header with the supplied Chaithanya logo.
+2. Fixed mobile product view layout so the product information, price, variants, quantity and buy buttons appear immediately after the gallery instead of being pushed below the review panel.
+3. Fixed product modal close behavior with direct + delegated click handling and Escape key support.
+4. Fixed cart drawer close behavior with direct + delegated click handling, backdrop close and Escape key support.
+5. Fixed Admin dashboard/login close behavior with delegated click handling and Escape key support.
+6. Raised overlay/button z-index values so close buttons remain clickable.
+7. Kept the existing WhatsApp number +91 8848911811 and chaithanya.shop canonical configuration from V6.

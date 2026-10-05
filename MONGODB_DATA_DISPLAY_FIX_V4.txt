@@ -1,0 +1,24 @@
+CHAITHANYA MONGODB DATA DISPLAY FIX V4
+
+Purpose:
+Fix cases where MongoDB contains the existing Chaithanya data but the website
+does not display it.
+
+Changes:
+- /api/store GET first reads _id=main.
+- If that is absent, it checks older type=main records.
+- It then read-only searches recent documents for a storefront-shaped legacy record.
+- It supports older documents where the storefront was nested under data or store.
+- Legacy documents are never deleted.
+- Admin writes continue to use the canonical _id=main document.
+- Frontend accepts both flat and legacy nested API response shapes.
+- MongoDB remains the source of truth; localStorage is not merged into existing data.
+
+IMPORTANT:
+Deploy this version without clearing or resetting the MongoDB database.
+After deployment, test:
+https://chaithanya.shop/api/health
+https://chaithanya.shop/api/store
+
+/api/store should return exists:true and data containing products/categories
+when the MongoDB collection contains the old store.

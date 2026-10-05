@@ -1,0 +1,15 @@
+CHAITHANYA MONGODB SYNC FIX V2
+
+1. MongoDB is the shared source of truth for products/categories/home content.
+2. localStorage is only a browser cache.
+3. On startup, MongoDB is loaded before the main UI is rendered.
+4. If an older browser still contains products/categories/model photos that are missing
+   from MongoDB, the app recovers those missing records into MongoDB without replacing
+   newer MongoDB records.
+5. Product save now stops if MongoDB save fails; the form is not cleared on a failed save.
+6. Live refresh checks MongoDB every 15 seconds for updates from other devices.
+7. Netlify MUST have MONGODB_URI available to Builds, Functions and Runtime.
+8. If using Netlify Deploy Previews, use the SAME MongoDB URI for Production and
+   Deploy Preview contexts if you expect preview and production to share data.
+9. After changing MONGODB_URI, redeploy the site.
+10. Verify https://chaithanya.shop/api/health returns {"ok":true,"database":"chaithanya"}.

@@ -1,0 +1,9 @@
+V15.1 BLACK BORDER FIX
+
+Fixed the unwanted black fade/rectangle appearing over the product description on the product view page.
+
+Changes:
+- Removed the black gradient pseudo-element from the collapsed product description.
+- Removed any background, border and shadow from the description container.
+- Kept the product description cream/light themed to match the product page.
+- Kept Read More styling clean and non-black.

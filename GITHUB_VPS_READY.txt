@@ -1,0 +1,2 @@
+Chaithanya V5 is prepared for GitHub + Ubuntu VPS + MongoDB Atlas deployment.
+See VPS_DEPLOYMENT.md.

@@ -1,0 +1,18 @@
+CHAITHANYA Firebase Live Update
+
+This version uses your old Firebase config in firebase-config.js.
+Live synced data path:
+Firestore collection: chaithanyaLiveStore
+Document: main
+
+Works live for:
+- Admin product add/edit/delete
+- Categories
+- Orders
+- Users/profile details
+- Reviews
+- Notifications
+- Homepage text/image settings
+- Cart/orders data
+
+Open through START-WEBSITE.bat or host online. If opening index.html directly, Firebase still works if internet is available, but a local server is recommended.

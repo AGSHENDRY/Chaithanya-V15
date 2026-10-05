@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chaithanya.shop/sitemap.xml

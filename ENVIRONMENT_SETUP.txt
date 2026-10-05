@@ -1,0 +1,28 @@
+CHAITHANYA - ENVIRONMENT VARIABLES
+
+1. On the VPS, inside the project folder, create a file named exactly:
+   .env
+
+2. Copy the contents of .env.example into .env and fill in your real values.
+
+3. NEVER upload .env to GitHub. It contains secrets such as the MongoDB password.
+
+Example:
+NODE_ENV=production
+PORT=3000
+HOST=127.0.0.1
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@CLUSTER.mongodb.net/
+MONGODB_DB=chaithanya
+MONGO_MAX_POOL_SIZE=10
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+MAIL_FROM=
+CORS_ORIGIN=https://chaithanya.shop
+
+After changing .env, restart the app:
+  pm2 restart chaithanya
+
+Check:
+  curl http://127.0.0.1:3000/api/health
